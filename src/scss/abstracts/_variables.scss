@@ -1,0 +1,51 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --main: #df4223;
+  --grey: #fcfbf4;
+  --dark-grey: #b2b8ca;
+  --blue: #3866df;
+  --p-color: #707070;
+  --light: #fff3eb;
+  --black: #333;
+  --white: #ffffff;
+
+  --biggest: 2.25rem;
+  --h1: 1.5rem;
+  --h2: 1.25rem;
+  --h3: 1rem;
+  --normal: 0.9375rem;
+  --small: 0.813rem;
+  --smaller: 0.75rem;
+
+  @media screen and (min-width: 768px) {
+    --biggest: 4rem;
+    --h1: 2.25rem;
+    --h2: 1.5rem;
+    --h3: 1.25rem;
+    --normal: 1rem;
+    --small: 0.875rem;
+    --smaller: 0.813rem;
+  }
+
+  /*========== Font weight ==========*/
+  --reg: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --dbold: 800;
+
+  /*========== Margenes ==========*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}

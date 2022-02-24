@@ -1,0 +1,162 @@
+@media (max-width: 767px) {
+  .home {
+    .intro {
+      .left {
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      &__title {
+        line-height: 46px;
+      }
+      p {
+        line-height: 26px;
+      }
+      ul {
+        flex-direction: column;
+        li {
+          margin-bottom: 20px;
+        }
+      }
+      .front-image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .features {
+      .nav {
+        margin-bottom: 40px;
+      }
+      .tab-content {
+        .left {
+          text-align: center;
+          img {
+            max-width: 100%;
+            width: auto !important;
+          }
+        }
+        .feature__content {
+          padding-top: 30px;
+          .title {
+            line-height: 35px;
+          }
+          p {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+    .works {
+      .section-title h3 {
+        line-height: 36px;
+      }
+      .box {
+        margin-bottom: 90px;
+      }
+    }
+    .projects {
+      &__bg {
+        padding-left: 30px;
+        &--content {
+          .title {
+            line-height: 40px;
+          }
+          .input-box {
+            flex-direction: column;
+            button {
+              margin-top: 20px;
+              margin-left: 0;
+              width: fit-content;
+            }
+          }
+        }
+        &--thumb {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .home {
+    .intro {
+      &__title {
+        line-height: 46px;
+      }
+      ul {
+        flex-direction: row;
+        justify-content: center;
+        li {
+          margin-bottom: 0;
+        }
+      }
+      .front-image > img {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .home {
+    .intro {
+      .left {
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      &__title {
+        font-size: 50px;
+        line-height: 60px;
+      }
+      ul {
+        justify-content: center;
+      }
+
+      img {
+        width: auto !important;
+        max-width: 100%;
+      }
+    }
+    .features {
+      .tab-content {
+        .left {
+          text-align: center;
+          margin-top: 40px;
+        }
+        > .active {
+          img {
+            width: auto !important;
+            max-width: 100%;
+          }
+        }
+      }
+      .feature__content {
+        padding-top: 40px;
+      }
+    }
+    .works {
+      .box {
+        margin-bottom: 90px;
+      }
+    }
+    .projects {
+      &__bg {
+        padding-left: 30px;
+
+        &--thumb {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .home {
+    .projects__bg--thumb {
+      right: 30px;
+    }
+  }
+}

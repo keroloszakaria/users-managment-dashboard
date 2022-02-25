@@ -1,30 +1,29 @@
 <template>
-  <NavHead />
   <router-view />
-  <FooterBottom />
 </template>
 
 <script>
-import NavHead from "@/components/NavHead";
-import FooterBottom from "@/components/FooterBottom";
 export default {
-  components: {
-    NavHead,
-    FooterBottom,
-  },
+  components: {},
 };
 </script>
 
 
 <style lang="scss" >
 #app {
+  display: flex;
+  flex-direction: column;
   font-family: "Poppins", sans-serif;
   a {
     text-decoration: none;
   }
-  main section:first-of-type {
-    padding-top: 200px;
+
+  main {
+    section:first-of-type {
+      padding-top: 200px;
+    }
   }
+
   a,
   i,
   span {

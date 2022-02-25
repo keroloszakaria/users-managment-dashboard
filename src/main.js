@@ -9,5 +9,9 @@ import "./scss/main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 
-const app = createApp(App).use(store).use(router);
+// Import sweet alert
+import VueSweetalert2 from "vue-sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
+
+const app = createApp(App).use(VueSweetalert2).use(store).use(router);
 app.mount("#app");

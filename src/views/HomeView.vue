@@ -1,4 +1,5 @@
 <template>
+  <NavHead />
   <main class="home">
     <section class="intro">
       <div class="container">
@@ -724,14 +725,19 @@
       </div>
     </section>
   </main>
+  <FooterBottom />
 </template>
 
 <script>
 // @ is an alias to /src
-
+import NavHead from "@/components/NavHead";
+import FooterBottom from "@/components/FooterBottom";
 export default {
   name: "HomeView",
-  components: {},
+  components: {
+    NavHead,
+    FooterBottom,
+  },
 };
 </script>
 
@@ -741,7 +747,7 @@ export default {
   overflow: hidden;
   position: relative;
   z-index: 10;
-  background: #290645;
+  background-color: #290645;
   background-image: url("../assets/intro/hero-bg.png");
   background-size: cover;
   background-position: 50%;
@@ -750,12 +756,12 @@ export default {
     font-weight: var(--bold);
     font-size: var(--biggest);
     line-height: 80px;
-    color: #fff;
+    color: var(--white);
     margin-top: 10px;
     margin-bottom: 22px;
   }
   p {
-    color: #fff;
+    color: var(--white);
     opacity: 0.5;
     font-size: var(--normal);
     line-height: 28px;
@@ -796,35 +802,35 @@ export default {
       }
 
       &.apple a {
-        color: #0e1133;
-        background: #fff;
-        border-color: #0e1133;
+        color: var(--dblue);
+        background-color: var(--white);
+        border-color: var(--dblue);
         &:hover {
-          background: transparent;
-          border-color: #54386a;
-          color: #fff;
+          background-color: transparent;
+          border-color: var(--lblue);
+          color: var(--white);
           svg {
-            fill: #fff;
+            fill: var(--white);
           }
         }
         svg {
-          fill: #0e1133;
+          fill: var(--dblue);
         }
       }
       &.google-play a {
-        background: transparent;
-        border-color: #54386a;
-        color: #fff;
+        background-color: transparent;
+        border-color: var(--lblue);
+        color: var(--white);
         &:hover {
-          border-color: #fff;
-          background: #fff;
-          color: #0e1133;
+          border-color: var(--white);
+          background-color: var(--white);
+          color: var(--dblue);
           svg {
-            fill: #0e1133;
+            fill: var(--dblue);
           }
         }
         svg {
-          fill: #fff;
+          fill: var(--white);
         }
       }
     }
@@ -862,19 +868,19 @@ export default {
         border-radius: 0;
         font-size: var(--normal);
         font-weight: var(--medium);
-        color: #505056;
+        color: var(--dgrey);
         text-align: left;
         padding: 0.5rem 0;
         cursor: pointer;
         transition: all 0.3s linear;
         &.active {
           border-color: transparent;
-          border-right-color: rgb(43, 112, 250);
-          color: rgb(43, 112, 250);
+          border-right-color: var(--blue);
+          color: var(--blue);
           .circle {
-            background: #2b70fa;
+            background-color: var(--blue);
             svg {
-              fill: #fff;
+              fill: var(--white);
             }
           }
         }
@@ -887,8 +893,7 @@ export default {
           width: 35px;
           align-items: center;
           justify-content: center;
-          background: #f1f2f7;
-          color: #63636a;
+          background-color: #f1f2f7;
           border-radius: 50%;
           margin-right: 10px;
           padding: 10px;
@@ -904,7 +909,7 @@ export default {
       span {
         font-size: var(--small);
         font-weight: var(--medium);
-        color: #2b70fa;
+        color: var(--blue);
         margin-bottom: 8px;
       }
       .title {
@@ -912,7 +917,7 @@ export default {
         line-height: 54px;
         margin-bottom: 10px;
         font-weight: var(--dbold);
-        color: rgb(14, 17, 51);
+        color: #0e1133;
       }
       p {
         font-size: var(--normal);
@@ -1005,7 +1010,7 @@ export default {
       background-image: linear-gradient(140deg, #ddf4fd, #eaf9ff);
     }
     > div:nth-child(2) .box {
-      background-image: linear-gradient(140deg, #fdead3, #fff7ee);
+      background-image: linear-gradient(140deg, #fdead3, var(--white) 7ee);
     }
     > div:nth-child(3) .box {
       background-image: linear-gradient(140deg, #dafedb, #f0fcf0);
@@ -1020,35 +1025,35 @@ export default {
       font-size: var(--h1);
       font-weight: var(--dbold);
       line-height: 54px;
-      color: #0e1133;
+      color: var(--dblue);
     }
     p {
       font-size: var(--normal);
       line-height: 28px;
       margin-top: 11px;
       font-weight: 400;
-      color: #505056;
+      color: var(--dgrey);
     }
   }
   .box {
     padding: 30px;
     margin-top: 30px;
     position: relative;
-    background: #fff;
+    background-color: var(--white);
     height: 160px;
     border-radius: 10px;
     &__content {
-      background: #fff;
+      background-color: var(--white);
       text-align: center;
       border-radius: 6px;
-      box-shadow: 0 30px 40px 0 rgba(0, 41, 57, 0.1);
+      box-shadow: 0 30px 40px 0 #0029391a;
       padding-top: 37px;
       padding-bottom: 40px;
       .title {
         font-size: 40px;
         font-weight: 400;
         margin-top: 5px;
-        color: #0e1133;
+        color: var(--dblue);
         margin: 0;
         span {
           font-weight: 700;
@@ -1058,7 +1063,7 @@ export default {
         font-size: 14px;
 
         line-height: 24px;
-        color: #505056;
+        color: var(--dgrey);
         font-weight: 500;
       }
     }
@@ -1082,7 +1087,7 @@ export default {
     &--content {
       padding-right: 50px;
       .title {
-        color: #fff;
+        color: var(--white);
         font-size: var(--h1);
         line-height: 60px;
         padding-bottom: 10px;
@@ -1090,7 +1095,7 @@ export default {
         margin: 0;
       }
       p {
-        color: #fff;
+        color: var(--white);
         opacity: 0.8;
         font-size: var(--normal);
         font-weight: var(--reg);
@@ -1105,7 +1110,7 @@ export default {
           padding-left: 30px;
           border-radius: 6px;
           border: 0;
-          background-color: #fff;
+          background-color: var(--white);
           &:focus {
             outline: none;
           }
@@ -1114,9 +1119,9 @@ export default {
           margin-left: 10px;
           border-radius: 6px;
           padding: 0 25px;
-          background: #0e1133;
+          background-color: var(--dblue);
           border: 0;
-          color: #fff;
+          color: var(--white);
           line-height: 50px;
         }
       }

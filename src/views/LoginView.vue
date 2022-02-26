@@ -82,17 +82,19 @@ export default {
     ...mapActions("userModule", ["checkUser"]),
 
     async login() {
+      localStorage.setItem("isAdmin", true);
       this.usersList = await this.checkUser(this.filter);
-      if (this.usersList) {
-        if (this.usersList.role == "Admin") {
-          this.$store.commit("setAuth", true);
-          this.$router.replace({ name: "admin" });
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "Sorry, This permission for admin only",
-            showConfirmButton: false,
-          });
+      if (Object.keys(this.usersList).length >= 1) {
+        for (let i = 0; i < this.usersList.length; i++) {
+          localStorage.setItem("isAuth", true);
+          this.$store.commit("setAuth", localStorage.getItem("isAuth"));
+          window.location.reload();
+          // const element = this.usersList[i];
+          // if (element.role == "Admin") {
+          //   localStorage.setItem("isAdmin", true);
+          // } else {
+          //   localStorage.setItem("isAdmin", false);
+          // }
         }
       } else {
         Swal.fire({

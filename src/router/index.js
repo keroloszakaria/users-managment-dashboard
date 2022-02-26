@@ -15,13 +15,20 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login,
+    beforeEnter: (to, from, next) => {
+      if (store.state.isAuth == true) {
+        next("/admin");
+      } else {
+        next();
+      }
+    },
   },
   {
     path: "/admin",
     name: "admin",
     component: Admin,
     beforeEnter: (to, from, next) => {
-      if (store.state.auth == false) {
+      if (store.state.isAuth == false || store.state.isAuth == null) {
         next("/login");
       } else {
         next();

@@ -4,19 +4,43 @@
       "id": 1,
       "username": "admin",
       "password": "admin",
-      "role": "Admin"
+      "role": "Admin",
+      "title": "Front-End Web Developer"
     },
     {
       "id": 2,
       "username": "s",
       "password": "s",
+      "role": "User",
+      "title": "Front-End Web Developer"
+    },
+    {
+      "username": "Ullam perspiciatis ",
+      "password": "Pa$$w0rd!",
+      "role": "User",
+      "title": "Quidem aut est omni",
+      "id": 12
+    },
+    {
+      "id": 13,
+      "username": "Et est et velit ut i",
+      "title": "Omnis praesentium cu",
+      "password": "Pa$$w0rd!",
       "role": "User"
     },
     {
-      "id": 3,
-      "username": "a",
-      "password": "a",
+      "id": "dyr9y6wnvac",
+      "username": "Dolores inventore re",
+      "title": "Sit occaecat e",
+      "password": "Pa$$w0rd!",
       "role": "User"
+    },
+    {
+      "id": 14,
+      "username": "Dolor minima enim ad",
+      "password": "Pa$$w0rd!",
+      "role": "Admin",
+      "title": "Duis sed vel sapient"
     }
   ]
 }

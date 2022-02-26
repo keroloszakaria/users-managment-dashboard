@@ -4,7 +4,6 @@ import actions from "./actions";
 
 export const state = () => ({
   users: [],
-  auth: false,
 });
 
 export default {
